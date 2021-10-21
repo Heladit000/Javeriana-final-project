@@ -1,7 +1,7 @@
 
 const actualTheme = localStorage.getItem("theme");
 
-//Obtenemos todos los elementos html
+//   Obtenemos todos los elementos html
 const allElementes = document.body.querySelectorAll("*");
 
 //No nos entrega una lista asi que debemos usar for en vez de .map
