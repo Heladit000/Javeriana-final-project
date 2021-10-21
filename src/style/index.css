@@ -1,0 +1,48 @@
+/* importamos la fuente desde google-fonts para que se agregue a todas las paginas */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* Importamos nuestra fuente de iconos */
+@import "../fonts/icomoon/style.css";
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: #fdfdfd;
+}
+
+.body-dark {
+  color: #dbdbdb;
+  background: #161616;
+}
+
+body::-webkit-scrollbar {
+  background: #d1d0d0;
+  width: 15px;
+}
+
+.body-dark::-webkit-scrollbar {
+  background: #2a2a2a;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #afaeae;
+}
+
+.body-dark::-webkit-scrollbar-thumb {
+  background: #3f3f3f;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: teal;
+}
+
+/* ejemplo para tener la altura del contenido */
+.default-content {
+  min-height: 90vh;
+  padding-top: 2em;
+  margin: 0;
+}
+
+.default-content .dark {
+  background: #161616;
+}

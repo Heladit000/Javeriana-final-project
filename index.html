@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./src/style/home/index.css">
+    <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
+    <!-- archivo de importacion de estilos principal -->
+    <link rel="stylesheet" href="./src/style/index.css">
+
+    <title>Nicolas Esteban Prieto Sarmiento</title>
+
+</head>
+
+<body>
+
+    <!-- importamos script de componentes -->
+    <script src="./src/components/customComponent.js"></script>
+
+    <!-- importamos nuestro layout (header/footer) -->
+    <script src="./src/components/layout/header.js" id="header"></script>
+    <script src="./src/components/layout/footer.js" id="footer"></script>
+
+    <header-component></header-component>
+
+    <div class="hero-container">
+        
+        <p id="terminal"></p>
+                
+        <div class="hero">
+            <img src="./src/img/profile.jpg" class="hero-profileImg" alt="profle">
+            <h1>Nicolás Esteban Prieto Sarmiento</h1>
+            <p>Hola!, soy un desarrollador Fullstack que disfruta de aprender cosas nuevas y desarrollar</p>
+
+            <div class="informationTable">
+                <div class="informationTable-card">
+                    <h4 class="informationTable-card__name">Nombre:</h4>
+                    <h4>Nicolas Esteban Prieto Sarmiento</h4>
+                </div>
+                <div class="informationTable-card">
+                    <h4 class="informationTable-card__name">Nacimiento:</h4>
+                    <h4>19 julio 2005</h4>
+                </div>
+                <div class="informationTable-card">
+                    <h4 class="informationTable-card__name">Hobbies:</h4>
+                    <h4>jugar videojuegos - tocar guitarra</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer-component></footer-component>
+
+    <script src="./src/scripts/setTheme.js"></script>
+    <script src="./src/scripts/home/terminalAnimation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+.chaTTing-container {
+  display: grid;
+  height: 74vh;
+  margin: 5em;
+  grid-template-rows: 87%;
+
+  box-shadow: 0px 0px 1px 0px #00000063, 1px 1px 3px -1px #000000f2;
+
+}
+
+.DIV-dark::-webkit-scrollbar {
+  background: #2a2a2a !important;
+}
+
+.DIV-dark::-webkit-scrollbar-thumb {
+  background: #3f3f3f;
+}
+
+.DIV-dark::-webkit-scrollbar-thumb:hover {
+  background: teal;
+}
+
+#chat {
+  overflow-y: auto;
+}
+
+.chaTTing-panel {
+  padding-left: 4%;
+  background: #ebebeb;
+}
+
+.chaTTing-panel-dark {
+  background-color: #292929;
+}
+
+.chaTTing-title {
+  margin-left: 2%;
+}
+
+.chaTTing-panel input {
+  border: none;
+  box-shadow: 0px 0px 1px 0px #00000063, 1px 1px 3px -1px #000000f2;
+  height: 2em;
+  outline: none;
+}
+
+.chaTTing-panel-dark input {
+  background: rgb(29, 29, 29);
+  color: #dbdbdb;
+}
+
+.chaTTing-panel button {
+  background: black;
+  color: white;
+  height: 2.5em;
+  border: none;
+  width: 8em;
+  margin-left: 2%;
+  opacity: 0.2;
+}
+
+#messageInput {
+  width: 67%;
+}
+
+.user-message {
+  background: #329dd12e;
+}
+
+.message {
+  padding: 1%;
+}
+
+.message p {
+  word-wrap: break-word;
+  padding-left: 1%;
+}

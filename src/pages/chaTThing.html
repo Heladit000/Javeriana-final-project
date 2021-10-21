@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/index.css">
+
+    <link rel="stylesheet" href="../style/chaTTIng/index.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+
+
+    <title>chaTThing</title>
+</head>
+
+<body>
+    <script src="../components/customComponent.js"></script>
+    <script src="../components/layout/header.js" id="header"></script>
+    <script src="../components/layout/footer.js" id="footer"></script>
+
+    <header-component></header-component>
+
+    <div class="chaTTing-title">
+        <h1>ChatTThing</h1>
+        <h4>los mensajes son simulados aleatoriamente</h4>
+    </div>
+
+    <div class="chaTTing-container">
+        <div id="chat">
+            <div class="message">
+                <h4>Alicia</h4>
+                <p>
+                    Hola, ¿como estas?
+                </p>
+            </div>
+        </div>
+
+        <div class="chaTTing-panel">
+            <h4 id="confirmationText"></h4>
+            <form id="messageForm">
+                <input type="text" name="nameInput" id="nameInput" placeholder="Nombre de usuario..." maxlength="15"
+                    onkeyup="messageVerification()">
+                <input type="text" name="nameInput" id="messageInput" placeholder="Esbribe un mensaje aqui"
+                    maxlength="200" onkeyup="messageVerification()" autocomplete="off">
+                <button id="sendButton" type="submit" disabled="true">>></button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <footer-component></footer-component>
+
+    <!-- Cambios cuando se cambia a tema oscuro -->
+    <script src="../scripts/setTheme.js"></script>
+
+    <script src="../scripts/chaTTing/index.js"></script>
+
+</body>
+
+</html>

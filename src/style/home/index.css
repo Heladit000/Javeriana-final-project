@@ -1,0 +1,57 @@
+.hero-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 57% 43%;
+  background: #070d11;
+  color: #dbdbdb;
+}
+
+.hero {
+  display: grid;
+  justify-content: right;
+  text-align: right;
+  padding: 10%;
+  padding-top: 11em;
+  z-index: 2;
+  position: relative;
+  font-size: 100%;
+}
+
+#terminal {
+  white-space: pre-line;
+  margin: 5%;
+  margin-right: 0;
+}
+
+#terminal span {
+  font-size: 1.5em;
+}
+
+.hero-profileImg {
+  justify-self: right;
+  border-radius: 50%;
+  width: 31%;
+}
+
+.informationTable {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin: 1%;
+}
+
+.informationTable-card__name {
+  color: teal;
+  text-align: right;
+}
+
+.informationTable-card h4 {
+  margin: 6%;
+}
+
+.informationTable-card {
+  display: grid;
+  text-align: left;
+  width: 20em;
+  grid-template-columns: 40% 60%;
+}

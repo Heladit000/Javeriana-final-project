@@ -1,0 +1,68 @@
+.study-container {
+    display: grid;
+    justify-items: center;
+}
+
+.study {
+    margin: 6%;
+    display: grid;
+    grid-template-columns: repeat(4,30%);
+    grid-template-rows: repeat(auto-fill,24%);
+    width: 40%;
+    gap: 2em;
+    row-gap: 4em;
+    justify-content: center;
+    justify-items: center;
+}
+
+.study-card {
+    border: 2px solid teal;
+    border-radius: 10px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    transition: .4s;
+}
+
+.study-card button {
+    color: black;
+    background: none;
+    border: 2px solid teal;
+    border-radius: 10px;
+    padding: 10%;
+    font-size: 120%;
+}
+
+.study-card-dark {
+    color: white;
+}
+
+.study-card:hover {
+    background: teal;
+}
+
+.study-card-content {
+    text-decoration: none;
+    width: 100%;
+}
+
+.study-card h4 {
+    color: black;
+    text-decoration: none;
+}
+
+.study-card-dark h4 {
+    color: white;
+}
+
+.study-card-dark button {
+    color: white;
+}
+
+.study-card a {
+    color: white;
+    text-decoration: none;
+}

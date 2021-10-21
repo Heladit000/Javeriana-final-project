@@ -1,0 +1,39 @@
+.header {
+  background: black;
+  color: white;
+  width: 100%;
+  height: 4em;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-panel {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.header-panel a {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+}
+
+.header-panel a:hover {
+    color: #0fb4b4;
+}
+
+.title {
+  font-size: 200%;
+  width: auto;
+  margin-right: 20%;
+}
+
+.icon-moon-stroke , .icon-sun {
+  color: #ffef2b;
+  cursor: pointer;
+  font-size: 150%;
+}
