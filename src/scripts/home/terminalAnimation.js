@@ -128,4 +128,3 @@ function writeLine(messageNumber, position) {
 
 //Empezamos desde el primer elemento
 writeLine(0, 0);
-
