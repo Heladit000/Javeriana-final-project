@@ -39,6 +39,9 @@
 
   .gallery{
   grid-template-columns: repeat(2, 40%);
+  }
 
+  iframe {
+    width: 90%;
   }
 }
