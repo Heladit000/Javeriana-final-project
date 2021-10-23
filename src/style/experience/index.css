@@ -1,68 +1,113 @@
+.nav-bar {
+    width: 50%;
+    margin: 4%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 130%;
+}
+
+.nav-bar a {
+    color: white;
+    background: teal;
+    transition: .4s;
+    padding: 2%;
+    text-decoration: none;
+}
+
+.nav-bar a:hover {
+    color: teal;
+    background: none;
+}
+
+
 .study-container {
-    display: grid;
-    justify-items: center;
+  display: grid;
+  justify-items: center;
 }
 
 .study {
-    margin: 6%;
+  margin: 6%;
+  display: grid;
+  grid-template-columns: repeat(4, 30%);
+  grid-template-rows: repeat(auto-fill, 24%);
+  width: 40%;
+  gap: 2em;
+  row-gap: 4em;
+  justify-content: center;
+  justify-items: center;
+}
+
+.study-card {
+  border: 2px solid teal;
+  border-radius: 10px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  transition: 0.4s;
+}
+
+.study-card img {
+    width: 100%;
+}
+
+.study-card button {
+  color: black;
+  background: none;
+  border: 2px solid teal;
+  border-radius: 10px;
+  padding: 10%;
+  font-size: 120%;
+}
+
+.study-card-dark {
+  color: white;
+}
+
+.study-card:hover {
+  background: teal;
+}
+
+.study-card-content {
+  text-decoration: none;
+  width: 100%;
+}
+
+.study-card h4 {
+  color: black;
+  text-decoration: none;
+}
+
+.study-card-dark h4 {
+  color: white;
+}
+
+.study-card-dark button {
+  color: white;
+}
+
+.study-card a {
+  color: white;
+  text-decoration: none;
+}
+
+.experiencies {
     display: grid;
-    grid-template-columns: repeat(4,30%);
-    grid-template-rows: repeat(auto-fill,24%);
-    width: 40%;
-    gap: 2em;
-    row-gap: 4em;
+    width: 100%;
     justify-content: center;
     justify-items: center;
 }
 
-.study-card {
-    border: 2px solid teal;
-    border-radius: 10px;
-    padding: 1em;
+.card-text {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-    transition: .4s;
+    width: 61%;
+    font-size: 153%;
 }
 
-.study-card button {
-    color: black;
-    background: none;
-    border: 2px solid teal;
-    border-radius: 10px;
-    padding: 10%;
-    font-size: 120%;
-}
-
-.study-card-dark {
-    color: white;
-}
-
-.study-card:hover {
-    background: teal;
-}
-
-.study-card-content {
-    text-decoration: none;
-    width: 100%;
-}
-
-.study-card h4 {
-    color: black;
-    text-decoration: none;
-}
-
-.study-card-dark h4 {
-    color: white;
-}
-
-.study-card-dark button {
-    color: white;
-}
-
-.study-card a {
-    color: white;
-    text-decoration: none;
+.card-text img {
+    width: 32%;
+    object-fit: cover;
+    margin: 3%;
 }

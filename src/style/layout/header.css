@@ -23,7 +23,7 @@
 }
 
 .header-panel a:hover {
-    color: #0fb4b4;
+  color: #0fb4b4;
 }
 
 .title {
@@ -32,7 +32,8 @@
   margin-right: 20%;
 }
 
-.icon-moon-stroke , .icon-sun {
+.icon-moon-stroke,
+.icon-sun {
   color: #ffef2b;
   cursor: pointer;
   font-size: 150%;

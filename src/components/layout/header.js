@@ -1,20 +1,18 @@
 //-componente Header y manejo de cambio de tema-
 
-
 //extiende de CustomComponent el cual importamos desde el html
 class Header extends CustomComponent {
+  constructor() {
+    super();
 
-    constructor() {
-        super();
+    //obtenemos la carpeta con nuestro id
+    this.folderPath = this.getPath("header");
 
-        //obtenemos la carpeta con nuestro id
-        this.folderPath = this.getPath("header");
+    //Obtiene el tema actual del almacenamiento local
+    this.actualTheme = localStorage.getItem("theme");
 
-        //Obtiene el tema actual del almacenamiento local
-        this.actualTheme = localStorage.getItem("theme");
-
-        //Nuestra plantilla con el html que tendemos con this.folderPath para las rutas relativas
-        this.template = `
+    //Nuestra plantilla con el html que tendemos con this.folderPath para las rutas relativas
+    this.template = `
         
         <link rel="stylesheet" href="${this.folderPath}/../../../fonts/icomoon/style.css">
         <link rel="stylesheet" href="${this.folderPath}/../../../style/layout/header.css">
@@ -28,7 +26,7 @@ class Header extends CustomComponent {
                         Experencias
                     </a>
                     <a href="${this.folderPath}/../../../pages/timeLine.html">
-                        Un poco deaa historia
+                        Un poco de historia
                     </a>
                     <a href="${this.folderPath}/../../../pages/materialOfInterest.html">
                         Material de interes
@@ -41,41 +39,39 @@ class Header extends CustomComponent {
         </div>
 
         `;
+  }
+
+  //Esta funcion es de HTMLElements si se ejecuta cuando se renderiza la pagina
+  connectedCallback() {
+    //Conectamos
+    const shadowRoot = this.connect(this.template);
+    const themeButton = shadowRoot.getElementById("themeButton");
+
+    if (this.actualTheme === "light") {
+      themeButton.classList.toggle("icon-moon-stroke");
+    } else {
+      themeButton.classList.toggle("icon-sun");
     }
 
-    //Esta funcion es de HTMLElements si se ejecuta cuando se renderiza la pagina
-    connectedCallback() {
+    themeButton.addEventListener("click", () => {
+      this.changeTheme();
+    });
+  }
 
-        //Conectamos
-        const shadowRoot = this.connect(this.template);
-        const themeButton = shadowRoot.getElementById("themeButton");
-
-        if (this.actualTheme === "light") {
-            themeButton.classList.toggle("icon-moon-stroke");
-        } else {
-            themeButton.classList.toggle("icon-sun");
-        }
-
-        themeButton.addEventListener("click", () => { this.changeTheme() });
+  //Controla el cambio de tema claro a oscuro usando local storage
+  changeTheme() {
+    //Cambia el tema de claro o oscuro
+    if (this.actualTheme === "light") {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
     }
 
-    //Controla el cambio de tema claro a oscuro usando local storage
-    changeTheme() {
-
-        //Cambia el tema de claro o oscuro
-        if (this.actualTheme === "light") {
-            localStorage.setItem("theme", "dark");
-        } else {
-            localStorage.setItem("theme", "light");
-        }
-
-        //recarga la pagina
-        window.location.reload();
-    }
+    //recarga la pagina
+    window.location.reload();
+  }
 }
 
-
-
 //Definimos un nuevo elemento
-//!!!!Debe tener -component para que funcione y sea identificado 
+//!!!!Debe tener -component para que funcione y sea identificado
 customElements.define("header-component", Header);

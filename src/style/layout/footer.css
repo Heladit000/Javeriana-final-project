@@ -1,10 +1,10 @@
 .footer {
-    background: black;
-    color: white;
-    display: flex;
-    justify-content: space-around;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
 }
 
 span {
-    color: red;
+  color: red;
 }
