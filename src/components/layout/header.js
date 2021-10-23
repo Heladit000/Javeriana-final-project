@@ -27,7 +27,7 @@ class Header extends CustomComponent {
                     </a>
                     <div class="panel-options panel-options-exit" id="panel-options">
                         <a href="${this.folderPath}/../../../pages/experience.html">
-                        Experencias
+                        Experiencias
                     </a>
                     <a href="${this.folderPath}/../../../pages/timeLine.html">
                         Un poco de historia
