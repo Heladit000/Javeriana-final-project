@@ -1,24 +1,23 @@
 .nav-bar {
-    width: 50%;
-    margin: 4%;
-    display: flex;
-    justify-content: space-around;
-    font-size: 130%;
+  width: 50%;
+  margin: 4%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 130%;
 }
 
 .nav-bar a {
-    color: white;
-    background: teal;
-    transition: .4s;
-    padding: 2%;
-    text-decoration: none;
+  color: white;
+  background: teal;
+  transition: 0.4s;
+  padding: 2%;
+  text-decoration: none;
 }
 
 .nav-bar a:hover {
-    color: teal;
-    background: none;
+  color: teal;
+  background: none;
 }
-
 
 .study-container {
   display: grid;
@@ -50,7 +49,7 @@
 }
 
 .study-card img {
-    width: 100%;
+  width: 100%;
 }
 
 .study-card button {
@@ -94,20 +93,36 @@
 }
 
 .experiencies {
-    display: grid;
-    width: 100%;
-    justify-content: center;
-    justify-items: center;
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  justify-items: center;
 }
 
 .card-text {
-    display: flex;
-    width: 61%;
-    font-size: 153%;
+  display: flex;
+  width: 61%;
+  font-size: 153%;
 }
 
 .card-text img {
-    width: 32%;
-    object-fit: cover;
-    margin: 3%;
+  width: 32%;
+  object-fit: cover;
+  margin: 3%;
+}
+
+@media (max-width: 728px) {
+  .study {
+    grid-template-rows: repeat(auto-fill, 15%);
+    grid-template-columns: repeat(2, 50%);
+    width: 60%;
+  }
+
+  .card-text {
+    width: 100%;
+  }
+
+  .nav-bar {
+    width: 83%;
+  }
 }

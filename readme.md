@@ -3,6 +3,6 @@
  - [x] Shadow components
  - [x] Reusable layout
  - [x] Only html css and js, no frameworks
- - [ ] Responsive desing  
+ - [x] Responsive desing  
  
  You can fork and check the code :D

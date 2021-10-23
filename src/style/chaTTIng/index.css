@@ -74,3 +74,18 @@
   word-wrap: break-word;
   padding-left: 1%;
 }
+
+@media (max-width: 728px) {
+  .chaTTing-panel input {
+    width: 80% !important;
+    margin: 2%;
+  }
+
+  .chaTTing-panel{
+    padding: 2%;
+  }
+
+  .chaTTing-container {
+    height: 120vh;
+  }
+}

@@ -11,6 +11,9 @@ class Header extends CustomComponent {
     //Obtiene el tema actual del almacenamiento local
     this.actualTheme = localStorage.getItem("theme");
 
+    this.showMenu = false;
+    this.panelOptions;
+
     //Nuestra plantilla con el html que tendemos con this.folderPath para las rutas relativas
     this.template = `
         
@@ -22,8 +25,8 @@ class Header extends CustomComponent {
                     <a href="${this.folderPath}/../../../../index.html" class="title">
                         N<span class="icon-terminal"></span>
                     </a>
-                    <span class="icon-menu"></span>
-                    <a href="${this.folderPath}/../../../pages/experience.html">
+                    <div class="panel-options panel-options-exit" id="panel-options">
+                        <a href="${this.folderPath}/../../../pages/experience.html">
                         Experencias
                     </a>
                     <a href="${this.folderPath}/../../../pages/timeLine.html">
@@ -35,8 +38,13 @@ class Header extends CustomComponent {
                     <a href="${this.folderPath}/../../../pages/chaTThing.html">
                         ChaTThing
                     </a>
-                    
-                    <span id="themeButton"></span>
+                    </div>
+                   
+                    <div class="ExtraOptions">
+                      <span class="icon-menu" id="menu"></span>
+                      <span id="themeButton"></span>  
+                    </div>
+                  
                 </div>
         </div>
 
@@ -47,17 +55,36 @@ class Header extends CustomComponent {
   connectedCallback() {
     //Conectamos
     const shadowRoot = this.connect(this.template);
-    const themeButton = shadowRoot.getElementById("themeButton");
 
+    //Importamos variables
+    const menu = shadowRoot.getElementById("menu");
+    const themeButton = shadowRoot.getElementById("themeButton");
+    const panelOptions = shadowRoot.getElementById("panel-options");
+
+    //cada vez que carga va a cambiar el icono
     if (this.actualTheme === "light") {
       themeButton.classList.toggle("icon-moon-stroke");
     } else {
       themeButton.classList.toggle("icon-sun");
     }
 
+    //va a escuchar cuando le damos click al icono
     themeButton.addEventListener("click", () => {
       this.changeTheme();
     });
+
+    //Manejo de abrir el menu en responsive
+    menu.addEventListener("click", () => {
+      if (this.showMenu === false) {
+        panelOptions.classList.remove("panel-options-exit");
+        panelOptions.classList.add("panel-options-entry");
+        this.showMenu = true;
+      } else {
+        panelOptions.classList.remove("panel-options-entry");
+        panelOptions.classList.add("panel-options-exit");
+        this.showMenu = false;
+      }
+    })
   }
 
   //Controla el cambio de tema claro a oscuro usando local storage

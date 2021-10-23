@@ -111,7 +111,7 @@ let randomMessage = {
     createTemplate("black", "Alicia", "que bien"),
     createTemplate("black", "Alicia", "claro que si"),
     createTemplate("black", "Alicia", "Pastel?"),
-    createTemplate("red", "lianca", "papu"),
+    createTemplate("red", "lianca", "Hola, como van?"),
     createTemplate("red", "lianca", ":("),
     createTemplate("red", "lianca", ":D"),
     createTemplate("red", "lianca", "oh, que bien"),
@@ -124,7 +124,7 @@ let randomMessage = {
     createTemplate("green", "EEEEE", "e e e e."),
     createTemplate("green", "EEEEE", "e e e?."),
     createTemplate("orange", "lizt0", "no quiero"),
-    createTemplate("pink", "Francis", "cuando vamos al parque?"),
+    createTemplate("pink", "Franck", "cuando vamos al parque?"),
     createTemplate(
       "brown",
       "mr.lacorner",

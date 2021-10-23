@@ -38,3 +38,9 @@ h1 {
 .timeLine-card h4:hover {
   transform: translateX(20px);
 }
+
+@media (max-width: 728px) {
+  .timeLine-container {
+    grid-template-columns: repeat(2, 47%);
+  }
+}

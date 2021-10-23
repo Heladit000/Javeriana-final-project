@@ -30,3 +30,15 @@
   transform: scale(1.1);
   box-shadow: 4px 4px 1px white;
 }
+
+@media (max-width: 728px) {
+  .iframe-list {
+    grid-template-columns: 1fr;
+    padding: 2%;
+  }
+
+  .gallery{
+  grid-template-columns: repeat(2, 40%);
+
+  }
+}
