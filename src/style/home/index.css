@@ -55,3 +55,18 @@
   width: 20em;
   grid-template-columns: 40% 60%;
 }
+
+
+@media (max-width: 600px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .hero {
+    grid-row-start: 1;
+  }
+  #termial {
+    grid-row-start: 2;
+  }
+}

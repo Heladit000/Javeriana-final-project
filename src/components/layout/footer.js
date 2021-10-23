@@ -12,6 +12,7 @@ class Footer extends CustomComponent {
                 <h4>the challenge: Only using HTML CSS & JS vanilla! (no libraries or others)</h4>
                 <h4>Made with <span class="icon-heart"></span> for Heladit000 for Pontificia Universidad Javeriana</h4>
                 <h4>2021</h4>
+                <a href="https://github.com/Heladit000/Javeriana-final-project" target="_blank"><span class="icon-github"></span></a>
             </div>
         `;
   }

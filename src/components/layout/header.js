@@ -22,6 +22,7 @@ class Header extends CustomComponent {
                     <a href="${this.folderPath}/../../../../index.html" class="title">
                         N<span class="icon-terminal"></span>
                     </a>
+                    <span class="icon-menu"></span>
                     <a href="${this.folderPath}/../../../pages/experience.html">
                         Experencias
                     </a>
@@ -34,6 +35,7 @@ class Header extends CustomComponent {
                     <a href="${this.folderPath}/../../../pages/chaTThing.html">
                         ChaTThing
                     </a>
+                    
                     <span id="themeButton"></span>
                 </div>
         </div>
