@@ -16,7 +16,7 @@ a {
   align-self: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 728px) {
   .footer {
     flex-direction: column;
     align-items: center;

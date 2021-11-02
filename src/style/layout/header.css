@@ -36,11 +36,82 @@
 .icon-sun {
   color: #ffef2b;
   cursor: pointer;
+}
+
+.icon-menu {
+  display: none;
+}
+
+.panel-options {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ExtraOptions {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 4%;
   font-size: 150%;
 }
 
-@media (max-width: 600px) {
-  .header-panel a {
-    display: none;
+@media (max-width: 728px) {
+  .ExtraOptions {
+    width: 40%;
+    margin-left: 40%;
+  }
+
+  .icon-menu {
+    display: block;
+  }
+
+  .panel-options {
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-around;
+    left: -1000px;
+
+    top: 0;
+    height: 100vh;
+    width: 40%;
+    display: flex;
+    background: #0fb4b4;
+    padding-left: 6%;
+  }
+
+  .panel-options-entry {
+    animation-name: panel-options-entry;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes panel-options-entry {
+    0% {
+      left: -1000px;
+    }
+
+    100% {
+      left: 0;
+    }
+  }
+
+  .panel-options-exit {
+    animation-name: panel-options-exit;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes panel-options-exit {
+    0% {
+      left: 0;
+    }
+
+    100% {
+      left: -1000px;
+    }
+  }
+
+  .title {
+    display: block !important;
   }
 }

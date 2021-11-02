@@ -121,7 +121,7 @@ let randomMessage = {
     createTemplate("green", "EEEEE", "e e e e."),
     createTemplate("green", "EEEEE", "e e e?."),
     createTemplate("orange", "lizt0", "no quiero"),
-    createTemplate("pink", "Francis", "¿Cuando vamos al parque?."),
+    createTemplate("pink", "Franck", "¿Cuando vamos al parque?"),
     createTemplate(
       "brown",
       "mr.lacorner",
