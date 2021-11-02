@@ -1,6 +1,6 @@
 const terminal = document.getElementById("terminal");
 
-//lista de mensajes con color y duracion
+//list of messages with color and duration
 const messages = [
   {
     message: "Heladit000@web-page ",
@@ -84,41 +84,41 @@ const messages = [
 
 let terminalText = "";
 
-//Va a dibujar caracter por carater segun el numero de mensaje y la posicion
+//draw character by character according to message number and position
 function writeLine(messageNumber, position) {
-  //Si no se a terminado la linea
+  //If the line is not finished
   if (position < messages[messageNumber].message.length) {
-    //Vamo a escribir un span con cada caracter dependiendo del color
+    //write a span with each character depending on the color
     terminalText += `<span style="color: ${
       messages[messageNumber].color || "white"
     }">${messages[messageNumber].message.slice(position, position + 1)}</span>`;
 
-    //Si el retraso de animacion es 0 ejecuta la funcion de nuevo con el siguiente caracter
+    //If the animation delay is 0, execute the function again with the next character
     if (messages[messageNumber].typeDelay === 0) {
       writeLine(messageNumber, position + 1);
     } else {
-      //Si tiene un tiempo establecido o 200 espera a que se ejecute
+      //If it has a set time or 200 wait for it to run
       setTimeout(() => {
         writeLine(messageNumber, position + 1);
       }, messages[messageNumber].typeDelay || 100);
     }
   } else {
-    //pasamos a la siguiente linea
+    //go to the next line
     if (messageNumber < messages.length - 1) {
       terminalText += "";
       setTimeout(() => {
         writeLine(messageNumber + 1, 0);
       }, messages[messageNumber].delay || 0);
     } else {
-      //reiniciamos el texto
+      //restart the text
       terminalText = "";
       writeLine(0, 0);
     }
   }
 
-  //Escribimos el texto en nuestra terminal
+  //write the text in our terminal
   terminal.innerHTML = terminalText;
 }
 
-//Empezamos desde el primer elemento
+//start from the first element
 writeLine(0, 0);

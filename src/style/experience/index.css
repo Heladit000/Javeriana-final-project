@@ -112,17 +112,34 @@
 }
 
 @media (max-width: 728px) {
+
+  .study-container {
+    margin: 4%;
+  }
+
   .study {
     grid-template-rows: repeat(auto-fill, 15%);
     grid-template-columns: repeat(2, 50%);
-    width: 60%;
+    width: 89%;
   }
 
   .card-text {
-    width: 100%;
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    margin: 10% 0; 
+  }
+
+  .card-text img {
+    width: 90%;
   }
 
   .nav-bar {
     width: 83%;
+    font-size: 80%;
+  }
+
+  .experiencies { 
+    margin-top: 19%;
   }
 }

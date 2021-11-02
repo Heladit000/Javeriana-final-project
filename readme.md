@@ -1,8 +1,8 @@
-## final project for Javeriana web developing course 💻
+## final project for Javeriana university web developing course 💻
 
  - [x] Shadow components
  - [x] Reusable layout
  - [x] Only html css and js, no frameworks
- - [x] Responsive desing  
+ - [x] Responsive design  
  
  You can fork and check the code :D

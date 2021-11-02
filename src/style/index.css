@@ -1,7 +1,7 @@
-/* importamos la fuente desde google-fonts para que se agregue a todas las paginas */
+/* import the font from google-fonts so that it is added to all pages*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-/* Importamos nuestra fuente de iconos */
+/* Import icon font */
 @import "../fonts/icomoon/style.css";
 
 body {
@@ -34,13 +34,6 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
   background: teal;
-}
-
-/* ejemplo para tener la altura del contenido */
-.default-content {
-  min-height: 90vh;
-  padding-top: 2em;
-  margin: 0;
 }
 
 .default-content .dark {

@@ -1,20 +1,20 @@
-//-componente Header y manejo de cambio de tema-
+//--Header component and theme change handling--
 
-//extiende de CustomComponent el cual importamos desde el html
+//extend from CustomComponent which we import from html
 class Header extends CustomComponent {
   constructor() {
     super();
 
-    //obtenemos la carpeta con nuestro id
+    //get the folder with id
     this.folderPath = this.getPath("header");
 
-    //Obtiene el tema actual del almacenamiento local
+    //Gets the current topic from local storage
     this.actualTheme = localStorage.getItem("theme");
 
     this.showMenu = false;
     this.panelOptions;
 
-    //Nuestra plantilla con el html que tendemos con this.folderPath para las rutas relativas
+    //template with the html that we have with this.folderPath for the relative paths
     this.template = `
         
         <link rel="stylesheet" href="${this.folderPath}/../../../fonts/icomoon/style.css">
@@ -51,29 +51,29 @@ class Header extends CustomComponent {
         `;
   }
 
-  //Esta funcion es de HTMLElements si se ejecuta cuando se renderiza la pagina
+  //This function is from HTMLElements if it is executed when the page is rendered
   connectedCallback() {
-    //Conectamos
+  
     const shadowRoot = this.connect(this.template);
 
-    //Importamos variables
+    //variable import
     const menu = shadowRoot.getElementById("menu");
     const themeButton = shadowRoot.getElementById("themeButton");
     const panelOptions = shadowRoot.getElementById("panel-options");
 
-    //cada vez que carga va a cambiar el icono
+    //every time you load the icon will change
     if (this.actualTheme === "light") {
       themeButton.classList.toggle("icon-moon-stroke");
     } else {
       themeButton.classList.toggle("icon-sun");
     }
 
-    //va a escuchar cuando le damos click al icono
+    //hear when we click on the icon
     themeButton.addEventListener("click", () => {
       this.changeTheme();
     });
 
-    //Manejo de abrir el menu en responsive
+    //Handling of opening the menu in responsive
     menu.addEventListener("click", () => {
       if (this.showMenu === false) {
         panelOptions.classList.remove("panel-options-exit");
@@ -87,7 +87,7 @@ class Header extends CustomComponent {
     })
   }
 
-  //Controla el cambio de tema claro a oscuro usando local storage
+  //Control the change from light to dark theme using local storage
   changeTheme() {
     //Cambia el tema de claro o oscuro
     if (this.actualTheme === "light") {
@@ -96,11 +96,11 @@ class Header extends CustomComponent {
       localStorage.setItem("theme", "light");
     }
 
-    //recarga la pagina
+    //reload the page
     window.location.reload();
   }
 }
 
-//Definimos un nuevo elemento
-//!!!!Debe tener -component para que funcione y sea identificado
+//Define new element
+//need have -component for it to work and be identified!
 customElements.define("header-component", Header);

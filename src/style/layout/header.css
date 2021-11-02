@@ -63,6 +63,7 @@
 
   .icon-menu {
     display: block;
+    cursor: pointer;
   }
 
   .panel-options {

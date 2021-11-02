@@ -1,6 +1,6 @@
-//--enviar mensajes--
+//--send messages--
 
-//Importamos los inputs y elementos html que nesecitamos
+//import the inputs and html elements that we need
 const confirmationText = document.getElementById("confirmationText");
 const nameInput = document.getElementById("nameInput");
 const messageInput = document.getElementById("messageInput");
@@ -11,16 +11,15 @@ const chat = document.getElementById("chat");
 
 let lastMessageRandomNumber = 0;
 
-//Funcion que retorna un numero aleatorio evitando que se repita
+//Function that returns a random number preventing it from repeating
 function random(lastNumber, min, max) {
   function getRandomNumber() {
-    //Genera numero aleatorio
+    //Generate random number
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
   let randomNumber = getRandomNumber();
 
-  //Mientras sea igual el anterior numero aleatorio al actual
   while (randomNumber === lastNumber) {
     randomNumber = getRandomNumber();
   }
@@ -29,7 +28,7 @@ function random(lastNumber, min, max) {
   return randomNumber;
 }
 
-//Confirmacion de que hay un mensaje y no supera los 200 caracteres
+//Confirmation that there is a message and it does not exceed 200 characters
 function messageVerification() {
   confirmationText.innerHTML = "";
   const buttonOpacity = "0.2";
@@ -53,7 +52,7 @@ function messageVerification() {
   }
 }
 
-//Template html de mensaje
+//html template of message
 function createTemplate(color, name, message) {
   return `
         <div class="message">
@@ -65,7 +64,7 @@ function createTemplate(color, name, message) {
     `;
 }
 
-//Crea un mensaje
+//Create message
 function createMessage(template) {
   const message = document.createElement("message");
   message.innerHTML = template;
@@ -73,7 +72,7 @@ function createMessage(template) {
   return message;
 }
 
-//Envia mensaje desde el formulario
+//Send message from the form
 function sendFormMessage(e) {
   e.preventDefault();
 
@@ -81,28 +80,28 @@ function sendFormMessage(e) {
     createTemplate("teal", nameInput.value, messageInput.value)
   );
 
-  //Obtienen el nodo del mensaje para añadirle una clase
-  //para que los mensaje del usuario tengan un estilo diferente
+  //get the message node to add a class to it
+  //different style in user message
   message.childNodes[1].classList.add("user-message");
 
-  //lo añade a la etiqueta html
+  //add html tag
   chat.appendChild(message);
 
-  //Hace scroll hacia abajo para ver los ultimos mensajes
+  //Scroll to last message
   chat.scrollTo(0, chat.scrollHeight);
 
-  //Desactiva el cambio de nombre de usuario
+  //Disable username change
   nameInput.disabled = true;
   sendButton.disabled = true;
 
-  //Borra lo que estuviera escrito en el input
+  //Delete what was written in the input
   messageInput.value = "";
 }
 
-//Escucha cuando se envia el formulario
+//Listen when the form is submitted
 messageForm.addEventListener("submit", sendFormMessage);
 
-//Tiene templates de mensajes prefabricados para simular un chat
+//Template of simulated messages
 let randomMessage = {
   messages: [
     createTemplate("black", "Alicia", "Porque me ignoran?."),
@@ -136,7 +135,7 @@ let randomMessage = {
   ],
 };
 
-//Crea un intervalo que manda un mensaje prefabricado de 4 a 6 segundos
+//Creates an interval that sends a pre-made message of 4 to 6 seconds
 setInterval(() => {
   const message = createMessage(
     randomMessage.messages[

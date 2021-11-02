@@ -1,26 +1,26 @@
 const actualTheme = localStorage.getItem("theme");
 
-//   Obtenemos todos los elementos html
+//get all the html elements
 const allElementes = document.body.querySelectorAll("*");
 
-//No nos entrega una lista asi que debemos usar for en vez de .map
-//Añadimos la clase dark a todos los elementos html si esta en tema oscuro
+//It does not give us a list so we must use for instead of .map
+//add the dark class to all html elements if it is in dark theme
 
 if (actualTheme === "dark" || actualTheme === null) {
-  //Añadimos la clase dark a body
+  //add the dark class to body
   document.body.classList.add("body-dark");
 
   for (let index = 0; index < allElementes.length; index++) {
-    //obtenemos la clase que tiene un elemento
+    //get the class that has an element
     const className = allElementes[index].className;
 
     if (className.length > 0) {
-      //Si tiene una clase vamos a añadirle la clase principal-dark
+      //If it has a class we are going to add the main-dark class to it
       allElementes[index].classList.add(
         `${allElementes[index].className}-dark`
       );
     } else {
-      //Si no tiene clase va añadirle el nombre del elemento html-dark
+      //If it does not have a class, it will add the name of the html-dark element
       allElementes[index].classList.add(`${allElementes[index].tagName}-dark`);
     }
   }
