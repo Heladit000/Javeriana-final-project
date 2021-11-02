@@ -1,7 +1,5 @@
 //--enviar mensajes--
 
-//Evita ataque de injeccion html
-
 //Importamos los inputs y elementos html que nesecitamos
 const confirmationText = document.getElementById("confirmationText");
 const nameInput = document.getElementById("nameInput");
@@ -107,34 +105,33 @@ messageForm.addEventListener("submit", sendFormMessage);
 //Tiene templates de mensajes prefabricados para simular un chat
 let randomMessage = {
   messages: [
-    createTemplate("black", "Alicia", "porque me ignoran?"),
-    createTemplate("black", "Alicia", "que bien"),
-    createTemplate("black", "Alicia", "claro que si"),
-    createTemplate("black", "Alicia", "Pastel?"),
-    createTemplate("red", "lianca", "papu"),
-    createTemplate("red", "lianca", ":("),
-    createTemplate("red", "lianca", ":D"),
-    createTemplate("red", "lianca", "oh, que bien"),
-    createTemplate("blue", "j0lio", "feliz cumpleaños!"),
-    createTemplate("blue", "j0lio", "Suena interesante!"),
-    createTemplate("darkgoldenrod", "zamuel", "hoy a sido un gran dia"),
-    createTemplate("darkgoldenrod", "zamuel", "Me gusta como piensas"),
-    createTemplate("purple", "Bob", "no te encuentras bien hoy?"),
+    createTemplate("black", "Alicia", "Porque me ignoran?."),
+    createTemplate("black", "Alicia", "Que bien."),
+    createTemplate("black", "Alicia", "Claro que si."),
+    createTemplate("black", "Alicia", "¿Pastel?"),
+    createTemplate("red", "lianca", ":(."),
+    createTemplate("red", "lianca", ":D."),
+    createTemplate("red", "lianca", "Oh, que bien."),
+    createTemplate("blue", "j0lio", "Feliz cumpleaños!."),
+    createTemplate("blue", "j0lio", "Suena interesante!."),
+    createTemplate("darkgoldenrod", "zamuel", "Hoy a sido un gran dia."),
+    createTemplate("darkgoldenrod", "zamuel", "Me gusta como piensas."),
+    createTemplate("purple", "Bob", "¿No te encuentras bien hoy?."),
     createTemplate("purple", "Bob", "jajaja"),
     createTemplate("green", "EEEEE", "e e e e."),
     createTemplate("green", "EEEEE", "e e e?."),
     createTemplate("orange", "lizt0", "no quiero"),
-    createTemplate("pink", "Francis", "cuando vamos al parque?"),
+    createTemplate("pink", "Francis", "¿Cuando vamos al parque?."),
     createTemplate(
       "brown",
       "mr.lacorner",
-      "La verdad prefiero quedarme en casa"
+      "La verdad prefiero quedarme en casa."
     ),
-    createTemplate("brown", "mr.lacorner", "Me gustaria invertir en eso"),
+    createTemplate("brown", "mr.lacorner", "Me gustaria invertir en eso."),
     createTemplate(
       "yellowgreen",
       "chile",
-      "La verdad prefiero quedarme en casa"
+      "La verdad prefiero quedarme en casa."
     ),
   ],
 };
